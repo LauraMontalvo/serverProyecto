@@ -51,8 +51,6 @@ module.exports.deleteAcount = (req, res) => {
 
 module.exports.validateAccount = (req, res) => {
     Acount.findOne({NombreUsuario:req.body.NombreUsuario})
-    
-
         .then((usuario) => {
             console.log(req.body);
             if(req.body.password === usuario.password){
