@@ -8,7 +8,6 @@ const AcountSchema = new mongoose.Schema({
         minlength: [3,"Se neceita mas de 3 caracteres"]
     },
    
-
     email: {
         type: String,
         required: [true, "Email is required"],
@@ -16,8 +15,6 @@ const AcountSchema = new mongoose.Schema({
             validator: val => /^([\w-\.]+@([\w-]+\.)+[\w-]+)?$/.test(val), 
             message: "Invalid email"
         }
-
-
     },
     password: {
         type: String,
@@ -40,9 +37,6 @@ AcountSchema.pre('validate', function(next) {
     next();
     });
 
-
-
 const Acount = mongoose.model('Acount', AcountSchema);
 
 module.exports = Acount;
-

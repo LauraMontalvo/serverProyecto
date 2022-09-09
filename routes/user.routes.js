@@ -9,4 +9,3 @@ module.exports = function(app){
     app.delete('/api/usuario/:id', AcountController.deleteAcount);
     app.post('/api/usuario/validate', AcountController.validateAccount);
 }
-
