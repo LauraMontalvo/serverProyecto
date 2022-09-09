@@ -3,7 +3,6 @@ const cors = require('cors');
 const app = express();
 const port = 8000;
 
-
 require('./config/mongoose.config.js')
 
 app.use(cors()); //Esto es nuevo
@@ -15,7 +14,5 @@ allUserRoutes(app);
 
 const allProductRoutes = require('./routes/product.routes');
 allProductRoutes(app);
-
-
 
 app.listen(port, () => console.log("Server is listening at port ", port));
