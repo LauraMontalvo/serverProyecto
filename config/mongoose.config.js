@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const db = 'users_db';
+const db = 'licoreria_db';
 
 mongoose.connect(`mongodb://127.0.0.1/${db}`, {
     useNewUrlParser: true,
