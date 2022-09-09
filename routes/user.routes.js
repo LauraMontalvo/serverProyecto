@@ -1,7 +1,6 @@
 const AcountController = require('../controllers/user.controller');
 
 module.exports = function(app){
-
     app.post('/api/usuario/new',  AcountController.createAcount);
     app.get('/api/usuarios', AcountController.getAllAcounts);
     app.get('/api/usuario/:id', AcountController.getAcount);
