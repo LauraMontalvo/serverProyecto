@@ -2,10 +2,10 @@ const Proveedor = require('../models/proveedor.model');
 
 module.exports.createProveedor = (request, response) =>{
    
-    const {nombre, telefono, direccion, ruc} = request.body;
+    const {nombreProveedor, telefonoProveedor, direccionProveedor, rucProveedor} = request.body;
     console.log(request.body)
     Proveedor.create({
-        nombre, telefono, direccion, ruc
+        nombreProveedor, telefonoProveedor, direccionProveedor, rucProveedor
     })
         .then(proveedor => response.json({insertedProveedor: proveedor, msg: 'Succesful creation'}))
         .catch(err => response.status(400).json(err));
