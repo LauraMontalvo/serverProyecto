@@ -15,4 +15,7 @@ allUserRoutes(app);
 const allProductRoutes = require('./routes/product.routes');
 allProductRoutes(app);
 
+const allProveedorRoutes = require('./routes/proveedor.routes');
+allProveedorRoutes(app);
+
 app.listen(port, () => console.log("Server is listening at port ", port));
