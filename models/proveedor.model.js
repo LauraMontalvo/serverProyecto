@@ -1,19 +1,19 @@
 const mongoose = require('mongoose');
 
 const ProveedorSchema = new mongoose.Schema({   
-    nombre: {
+    nombreProveedor: {
         type: String,
         required: [true, 'El nombre es obligatorio']
     },
-    telefono: {
+    telefonoProveedor: {
         type: String,
         required: [true, "Se requiere ingresar el telefono del proveedor"],
     },
-    direccion: {
+    direccionProveedor: {
         type: String,
         required: [true, "Se requiere ingresar la dirección del proveedor"],
     },
-    ruc: {
+    rucProveedor: {
         type: String,
         required: [true, 'Se requiere ingresar el ruc del proveedor ']
     }
