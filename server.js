@@ -18,4 +18,10 @@ allProductRoutes(app);
 const allProveedorRoutes = require('./routes/proveedor.routes');
 allProveedorRoutes(app);
 
+const allFacturaRoutes = require('./routes/factura.routes');
+allFacturaRoutes(app);
+
+const allDetalleRoutes = require('./routes/detalle.routes');
+allDetalleRoutes(app);
+
 app.listen(port, () => console.log("Server is listening at port ", port));
