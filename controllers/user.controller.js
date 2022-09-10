@@ -51,5 +51,5 @@ module.exports.validateAccount = (req, res) => {
                 res.json({msg: 'Contraseña incorrecta, ingrese nuevamente!!'});
             }
         })
-        .catch(err => res.status(400).json({err: err, msg: "Este usuario no Existe!"}));
+        .catch(err => res.json({err: err, msg: "Este usuario no Existe!"}));
 }
