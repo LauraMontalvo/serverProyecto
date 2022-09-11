@@ -21,3 +21,9 @@ module.exports.getFactura = (request, response) =>{
     .then(factura => response.json(factura))
     .catch(err => response.json(err))
 }
+
+module.exports.deleteFactura = (request, response) =>{
+    Factura.deleteOne({_id: request.params.id})
+    .then(facturaDeleted => response.json(facturaDeleted))
+    .catch(err => response.json(err))
+}
