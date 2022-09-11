@@ -7,7 +7,6 @@ const AcountSchema = new mongoose.Schema({
         required: [true, 'Username is mandatory'],
         minlength: [3,"Se neceita mas de 3 caracteres"]
     },
-   
     email: {
         type: String,
         required: [true, "Email is required"],
@@ -24,7 +23,7 @@ const AcountSchema = new mongoose.Schema({
         minlength: [3, "Password must be at least 3 chars"]
         }
 }, { timestamps: true });
-        
+ 
 AcountSchema.virtual('confirmPassword')
 .get( () => this._confirmPassword )
 .set( value => this._confirmPassword = value );
