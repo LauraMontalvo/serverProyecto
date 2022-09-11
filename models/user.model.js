@@ -4,13 +4,13 @@ const AcountSchema = new mongoose.Schema({
     
     NombreUsuario: {
         type:  String,
-        required: [true, 'Username is mandatory'],
-        minlength: [3,"Se neceita mas de 3 caracteres"]
+        required: [true, 'EL nombre de Usuario es Obligatorio!'],
+        minlength: [3,"Se necesita mas de 3 caracteres"]
     },
    
     email: {
         type: String,
-        required: [true, "Email is required"],
+        required: [true, "Correo electronico es requerido"],
         validate: {
             validator: val => /^([\w-\.]+@([\w-]+\.)+[\w-]+)?$/.test(val), 
             message: "Invalid email"
@@ -19,9 +19,9 @@ const AcountSchema = new mongoose.Schema({
     password: {
         type: String,
         required: [
-        true, "Password is required"
+        true, "Se requiere Contraseña"
         ],
-        minlength: [3, "Password must be at least 3 chars"]
+        minlength: [3, "La contraseña debe tener al menos 3 caracteres!!"]
         }
 }, { timestamps: true });
         
@@ -40,3 +40,4 @@ AcountSchema.pre('validate', function(next) {
 const Acount = mongoose.model('Acount', AcountSchema);
 
 module.exports = Acount;
+
