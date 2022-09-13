@@ -5,7 +5,11 @@ const port = 8000;
 
 require('./config/mongoose.config.js')
 
-app.use(cors()); //Esto es nuevo
+app.use(cors()); //Esto es nuevoTodas los demás solicitudes HTTP de origen 
+//cruzado son solicitudes no simples. 
+//Si los recursos de la API reciben solicitudes no simples, tiene que habilitar el soporte de CORS.
+//Es un mecanismo para permitir o restringir los recursos solicitados en un 
+//servidor web dependiendo de dónde se inició la solicitud HTTP.
 app.use(express.json());
 app.use(express.urlencoded( { extended: true } ));
 
